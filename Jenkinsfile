@@ -10,7 +10,7 @@ steps {
 stage('Build') {
 steps {
 // Build the java application ( replace with your build commands)
-  sh 'java version'
+  sh 'java -version'
   }
 }
 stage('Deploy') {
