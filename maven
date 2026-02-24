@@ -1,0 +1,16 @@
+pipeline {
+    agent any
+    tools {
+        // 'M3' should match the name of the Maven installation configured in 
+        // Manage Jenkins -> Global Tool Configuration
+        maven 'M3'
+    }
+    stages {
+        stage('Build') {
+            steps {
+                // This step executes the mvn command in the shell
+                sh 'mvn clean package'
+            }
+        }
+    }
+}
